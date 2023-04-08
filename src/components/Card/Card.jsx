@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { Link, NavLink } from 'react-router-dom';
+import style from "./Card.module.css";
 
-export default function Card({id,name,status,species,gender,origin,image,onClose}) {
+function Card({id,name,status,species,gender,origin,image,onClose}) {
    return (
       <div>
          <button onClick={() => onClose(id)}>X</button>
@@ -15,3 +17,5 @@ export default function Card({id,name,status,species,gender,origin,image,onClose
       </div>
    );
 }
+
+export default Card

@@ -1,4 +1,5 @@
-import Card from './Card';
+import Card from '../Card/Card';
+import style from "./Cards.module.css";
 
 function Cards({characters, onClose}) {
    return (
