@@ -22,13 +22,13 @@ const Detail = () =>{
      }, [detailId]);
 
     return (
-        <div>
-            <h1>{character?.name}</h1>
-            <p>{character?.status}</p>
-            <p>{character?.gender}</p>
-            <p>{character?.species}</p>
-            <p>{character?.origin?.name}</p>
-            <img src={character?.image} alt={character?.name}/>
+        <div className={style.card}>
+            <h1 className={style.name}>{character?.name}</h1>
+            <p className={style.description}>{character?.status}</p>
+            <p className={style.description}>{character?.gender}</p>
+            <p className={style.description}>{character?.species}</p>
+            <p className={style.description}>{character?.origin?.name}</p>
+            <img className={style.image} src={character?.image} alt={character?.name}/>
         </div>
     )
 }

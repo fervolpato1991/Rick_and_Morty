@@ -3,7 +3,7 @@ import style from "./Cards.module.css";
 
 function Cards({characters, onClose}) {
    return (
-   <div>{
+   <div className={style.characters}>{
       characters.map(({id,name,status,species,gender,origin,image})=> {
          return <Card
          key={id}

@@ -4,16 +4,16 @@ import style from "./Card.module.css";
 
 function Card({id,name,status,species,gender,origin,image,onClose}) {
    return (
-      <div>
-         <button onClick={() => onClose(id)}>X</button>
-         <NavLink to={`/detail/${id}`} >
-         <h2>{name}</h2>
+      <div className={style.card}>
+         <button className={style.button} onClick={() => onClose(id)}>X</button>
+         <NavLink className={style.link} to={`/detail/${id}`} >
+         <h2 className={style.detail}>{name}</h2>
          </NavLink>
-         <h2>{status}</h2>
-         <h2>{species}</h2>
-         <h2>{gender}</h2>
-         <h2>{origin}</h2>
-   <img src={image} alt={name} /> 
+         <h2 className={style.description}>{status}</h2>
+         <h2 className={style.description}>{species}</h2>
+         <h2 className={style.description}>{gender}</h2>
+         <h2 className={style.description}>{origin}</h2>
+   <img className={style.image} src={image} alt={name} /> 
       </div>
    );
 }
