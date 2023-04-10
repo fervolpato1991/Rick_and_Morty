@@ -17,10 +17,10 @@ function App() {
 
    const [access, setAccess] = useState(false);
    const EMAIL = 'fervolpato1991@gmail.com';
-   const PASSWORD = 'unaPassword123';
+   const PASSWORD = 'pass123';
    const navigate = useNavigate();
 
-   function login(userData) {
+   const login = (userData) => {
       if (userData.password === PASSWORD && userData.email === EMAIL) {
          setAccess(true);
          navigate('/home');
