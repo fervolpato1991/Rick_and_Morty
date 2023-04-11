@@ -16,7 +16,7 @@ function App() {
    const location = useLocation();
 
    const [access, setAccess] = useState(false);
-   const EMAIL = 'fervolpato1991@gmail.com';
+   const EMAIL = 'usuario@gmail.com';
    const PASSWORD = 'pass123';
    const navigate = useNavigate();
 
