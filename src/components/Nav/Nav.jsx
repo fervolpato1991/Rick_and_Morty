@@ -17,6 +17,9 @@ const Nav = ({ onSearch }) =>{
             <button className={style.button}>
                 <NavLink className={style.link} to='/'>Log out</NavLink>
             </button>
+            <button className={style.button}>
+                <NavLink className={style.link} to='/favorites'>Favorites</NavLink>
+            </button>
             </div>
          </nav>
     )

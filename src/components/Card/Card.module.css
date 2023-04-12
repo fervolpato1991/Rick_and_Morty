@@ -70,3 +70,10 @@
 a:link, a:visited, a:active {
     text-decoration:none;
 }
+.favorite{
+    position: absolute;
+    right: 2%;
+    border-radius: 100%; 
+    background: transparent;
+    border-color: transparent;
+}
