@@ -8,15 +8,14 @@ import { useState } from "react";
 const Favorites = (props) => {
     //const favorites = useSelector(state => state.myFavorites)
     const dispatch = useDispatch()
+    // eslint-disable-next-line no-unused-vars
     const [aux, setAux] = useState(false);
     
     const handleOrder = (event) => {
-        event.preventDefault()
         dispatch(orderCards(event.target.value))
-        setAux(!aux)
+        setAux(true);
     }
     const handleFilter = (event) => {
-        event.preventDefault()
         dispatch(filterCards(event.target.value))
         
     }
@@ -32,6 +31,7 @@ const Favorites = (props) => {
               <option value="Female">Female</option>
               <option value="Genderless">Genderless</option>
               <option value="unknown">unknown</option>
+              <option value="allCharacters">All Characters</option>
             </select>
         <div className= {style.favorite}>
             {/*favorites?*/props.myFavorites.map(({id, name, status, species, gender,origin, image, onClose}) => {

@@ -24,10 +24,10 @@ const Detail = () =>{
     return (
         <div className={style.card}>
             <h1 className={style.name}>{character?.name}</h1>
-            <p className={style.description}>{character?.status}</p>
-            <p className={style.description}>{character?.gender}</p>
-            <p className={style.description}>{character?.species}</p>
-            <p className={style.description}>{character?.origin?.name}</p>
+            <p className={style.description}>Status:  {character?.status}</p>
+            <p className={style.description}>Gender:  {character?.gender}</p>
+            <p className={style.description}>Species:  {character?.species}</p>
+            <p className={style.description}>Origin:  {character?.origin?.name}</p>
             <img className={style.image} src={character?.image} alt={character?.name}/>
         </div>
     )
