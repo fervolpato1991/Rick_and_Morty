@@ -42,7 +42,8 @@ const handleSubmit = (event) => {
              <input name="password"  type="password" placeholder="Enter your password" value={userData.password} onChange={handleChange}  className={style.formInput}/>
              {errors.password && <p className={style.formErrors}>{errors.password}</p>}
 
-            <button className={style.button}>Submit</button>
+            <button className={style.button} disabled={!userData.email || !userData.password||errors.email||errors.password}>Submit</button>
+           
            </div>
         </form>
     </div>
