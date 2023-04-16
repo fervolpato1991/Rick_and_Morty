@@ -1,7 +1,7 @@
 .searchbar{
     position: absolute;
-    top: 1%;
-    left: 11%;
+    top: 15%;
+    left: 18%;
     transform:  translate(-50%,50%);
     background: #2f3640;
     height: 40px;
@@ -15,6 +15,10 @@
 .searchbar:hover > .searchbutton {
     background: white;
     color : #2f3640;
+    background-image: url("../../images/baseline_search_black_24dp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
   }
   .searchbutton {
     color: white;
@@ -27,6 +31,10 @@
     justify-content: center;
     align-items: center;
     transition: 0.4s;
+    background-image: url("../../images/magnifying-glass-search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
 }
 .input {
     border:none;
@@ -41,6 +49,11 @@
     width: 0px;
 
 }
+::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
 @media screen and (max-width: 620px) {
     .searchBox:hover > .searchInput {
         width: 150px;
