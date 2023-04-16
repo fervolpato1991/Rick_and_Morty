@@ -16,6 +16,18 @@
     height: 18rem;
     width: 11rem;
     transition: all ease 0.8s;
+    object-fit:cover;
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+    
+}
+.card:hover{
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+     transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+
 }
 .image{  
     bottom:6rem;

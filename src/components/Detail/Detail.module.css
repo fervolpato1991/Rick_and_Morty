@@ -17,6 +17,11 @@
   height: 370px;
   width: 300px;
 }
+.card:hover{
+  transform: scale(1.05);
+  transition: transform 500ms ease-in;
+}
+
 .name {
   top: 11rem;
   position: relative;

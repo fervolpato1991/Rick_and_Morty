@@ -9,8 +9,7 @@
 }
 .button {
     padding: 25px 30px;
-    background-color: #050801;
-    color: #03e9f4;
+    background: linear-gradient(to right, #434343 0%, black 100%);
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -18,18 +17,21 @@
     overflow: hidden;
     transition: 0.5s;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 46%;
     margin: 2rem;
 }
 
 .button:hover {
-    background: #03e9f4;
+    background: radial-gradient(465px at -15.1% -25%, rgb(17, 130, 193) 0%, rgb(67, 166, 238) 49%, rgb(126, 203, 244) 90.2%);
     color: #050801;
     box-shadow: 0 0 5px #03e9f4,
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+     animation: spring 300ms ease-out;
+     font-weight: bold;
+   
 }
 .button:active {
   transform: translateY(4px);

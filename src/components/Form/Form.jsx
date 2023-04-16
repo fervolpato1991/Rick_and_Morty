@@ -1,6 +1,7 @@
 import { useState } from "react";
 import validation from "../../validation";
 import style from "./Form.module.css";
+import image from "../../images/Rick-And-Morty-Logo3.png";
 
 const Form = ( {login} ) => {
     const [userData, setUserData] = useState({
@@ -41,6 +42,7 @@ const handleSubmit = (event) => {
              <label htmlFor="password"  className={style.formLabel}>Password</label>
              <input name="password"  type="password" placeholder="Enter your password" value={userData.password} onChange={handleChange}  className={style.formInput}/>
              {errors.password && <p className={style.formErrors}>{errors.password}</p>}
+             <img src={image} alt="Logo" className={style.image}/>
 
             <button className={style.button} disabled={!userData.email || !userData.password||errors.email||errors.password}>Submit</button>
            
