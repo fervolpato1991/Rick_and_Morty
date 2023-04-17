@@ -21,6 +21,7 @@
     font-weight: 200;
     box-shadow: 4px 4px 20px -2px rgba(0, 0, 0, 0.35);
     transition: all 0.4s;
+    left: 30%;
   }
   .select:hover{
     transform: translateY(-2px);

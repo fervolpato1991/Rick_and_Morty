@@ -6,3 +6,10 @@
     justify-items: center;
     margin: 5rem;
 }
+.image{
+    position: absolute;
+    width: 15%;
+    bottom: -10%;
+    right: 7%;
+    opacity: 90%;
+}

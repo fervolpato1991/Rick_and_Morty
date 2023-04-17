@@ -54,7 +54,7 @@ function App() {
       <div className='App'>
          {location.pathname ==="/" ? <Form login={login}/> : <Nav onSearch={onSearch}/>}
          <Routes>
-            <Route path="home" element={<Cards characters={characters} onClose={onClose}/>}/>
+            <Route path="home" element={<Cards characters={characters} onClose={onClose} />}/>
             <Route path="about" element={<About/>}/>
             <Route path="favorites" element={<Favorites/>}/>
             <Route path="detail/:detailId" element={<Detail/>}/>
