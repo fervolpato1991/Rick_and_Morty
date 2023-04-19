@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import style from "./Detail.module.css";
 
-const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
-const API_KEY = '9b821dc054a4.2c27b5a577f845ec9327';
+//const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
+//const API_KEY = '9b821dc054a4.2c27b5a577f845ec9327';
 
 const Detail = () =>{
     const {detailId} = useParams();
