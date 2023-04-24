@@ -1,10 +1,11 @@
 .characters {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 0%;
-    grid-row-gap: 1rem;
+    grid-column-gap: 5%;
+    grid-row-gap: 4rem;
     justify-items: center;
-    margin: 5rem;
+    margin: 6rem;
+    
 }
 .image{
     position: absolute;

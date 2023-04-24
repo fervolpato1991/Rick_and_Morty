@@ -34,7 +34,47 @@
    
 }
 .button:active {
-  transform: translateY(4px);
+  animation: shockwaveJump 1s ease-out infinite;
+}
+.button:after{
+  animation: shockwave 1s .65s ease-out infinite;
+}
+.button::before{
+  animation: shockwave 1s .5s ease-out infinite;
+}
+@keyframes shockwaveJump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.08);
+  }
+  50% {
+     transform: scale(0.98);
+  }
+  55% {
+    transform: scale(1.02);
+  }
+  60% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px rgba(17, 130, 193,0.65), inset 0 0 1px rgb(126, 203, 244) 90.2%;
+  }
+  95% {
+    box-shadow: 0 0 50px #03e9f4, inset 0 0 30px #03e9f4;
+  }
+  100% {
+    transform: scale(2.25);
+
+  }
 }
 
 @keyframes spring {
