@@ -21,32 +21,59 @@ function App() {
    // const PASSWORD = 'pass123';
    const navigate = useNavigate();
 
-   const login = (userData) => {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+   const login = async (userData) => {
+      try{
+         const { email, password } = userData;
+         const URL = 'http://localhost:3001/rickandmorty/login/';
+         const {data} = await axios.get(`${URL}?email=${email}&password=${password}`);
          const { access } = data;
          setAccess(data);
          access && navigate('/home');
-      });
+
+      }catch(error){
+         throw new Error(error);
+      }
    }
+
+   // const login = (userData) => {
+   //    const { email, password } = userData;
+   //    const URL = 'http://localhost:3001/rickandmorty/login/';
+   //    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+   //       const { access } = data;
+   //       setAccess(data);
+   //       access && navigate('/home');
+   //    });
+   // }
 
    useEffect(() => {
       !access && navigate('/');
    // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [access]);
-   
-   const onSearch = (id) => {
-      axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(response=> response.data)
-      .then((data) => {
-         if (data.name) {
+
+   const onSearch = async (id) => {
+      try{
+         const {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+
+         if(data.name){
             setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            alert('¡No hay personajes con este ID!');
          }
-      });
+      }
+      catch(error){
+         alert('¡No hay personajes con este ID!');
+      }
    }
+
+   // const onSearch = (id) => {
+   //    axios(`http://localhost:3001/rickandmorty/character/${id}`)
+   //    .then(response=> response.data)
+   //    .then((data) => {
+   //       if (data.name) {
+   //          setCharacters((oldChars) => [...oldChars, data]);
+   //       } else {
+   //          alert('¡No hay personajes con este ID!');
+   //       }
+   //    });
+   // }
    
    const onClose = (id) =>{
       const charactersFiltered = characters.filter(character => character.id !== id)
